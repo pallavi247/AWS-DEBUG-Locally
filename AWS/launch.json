@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "retrieveDocument:HelloWorldFunction",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/retrieveDocument/template.yaml",
+                "logicalId": "HelloWorldFunction"
+            },
+            "lambda": {
+                "payload": {
+                    "path": "retrieveDocument/events/event.json"
+                },
+                "environmentVariables": {}
+            },
+            "aws": {
+                "credentials": "profile:accountid_profilename"
+              }
+        }
+    ]
+}
