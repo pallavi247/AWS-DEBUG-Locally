@@ -1,0 +1,55 @@
+1) Install AWS CLI
+$ aws sso login --profile my-profile
+
+$ aws s3 ls --profile accountid_profilename
+
+2) Install Docker Desktop
+Docker
+https://docs.docker.com/get-started/overview/
+
+Open Docker Desktop
+
+Give elevated access
+WSL 2 installation. 
+	WSL - Windows Subsystem for Linux (WSL) lets developers run a GNU/Linux environment -- including most command-line tools, 
+	utilities, and applications -- directly on Windows, unmodified, without the overhead of a traditional virtual machine or dual-boot setup.
+
+WSL Linus kernel is now installed using a separate MSI update package
+https://docs.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+
+3) Install SAM CLI
+
+4) Install AWS Toolkit
+If below error seen, update the latest version of VS Code
+
+AWS Tool Kit VS Code
+{"$id":"1","innerException":null,"message":"Request was blocked due to exceeding usage of resource 'Count' in namespace 'AnonymousId'.
+ For more information on why your request was blocked, see the topic \"Rate limits\" on the Microsoft Web 
+ site (https://go.microsoft.com/fwlink/?LinkId=823950).","typeName":"Microsoft.TeamFoundation.Framework.Server.RequestBlockedException,
+ Microsoft.TeamFoundation.Framework.Server","typeKey":"RequestBlockedException","errorCode":0,"eventId":3000}
+
+5) Creating SAM Project
+ a) To initialize our project use 
+	$ sam init -- help
+ b) Create your project folder structure 
+	Project Name>src>app.py (lambda function coe)
+	create a SAM file template.yaml
+6) Install Lambda Debug from extenstions in VS Code
+
+7) Creating SAM project another way
+   Ctrl+Shift+P - Create Lambda SAM application
+   select python 3.9 runtime
+   Hello World
+   
+8) To configure debug go to app.py
+   Click Add Debug Configuration just above lambda_handler
+   This will create a lanuch.json
+   update json as per you need
+9) run debug config https://docs.aws.amazon.com/toolkit-for-vscode/latest/userguide/serverless-apps-run-debug-config-ref.html
+https://docs.aws.amazon.com/toolkit-for-vscode/latest/userguide/serverless-apps-run-debug-no-template.html
+   
+	
+6) sam local generate-event apigateway aws-proxy | clip
+
+ 
+	
